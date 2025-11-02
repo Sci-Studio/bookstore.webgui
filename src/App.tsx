@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-
+// test protection rule
 export default function App() {
   return (
     <main style={{ padding: 24 }}>
