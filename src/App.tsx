@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
@@ -12,6 +12,7 @@ const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 export default function App() {
   const [books, setBooks] = useState<Array<IBook>>([])
 
+  const navigate = useNavigate()
 
   useEffect(() => {
       axios.get(`${API_BASE}/books`).then(r => setBooks(r.data))
@@ -37,7 +38,7 @@ export default function App() {
             <h2>My Books</h2>
             <p>Browse and manage your personal library connection</p>
           </div>
-          <div className='button'>
+          <div className='button' onClick={() => navigate('/books/new')}>
             <img className='addImage' src={add} alt="add"/>
             <label>Add New Book</label>
           </div>

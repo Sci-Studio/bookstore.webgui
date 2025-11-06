@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import './BookForm.css'
 
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
@@ -12,6 +14,8 @@ export default function BookForm() {
     const [imageFile, setImageFile] = useState<File | null>(null)
     const [msg, setMsg] = useState('')
     const [uploading, setUploading] = useState(false)
+
+    const navigate = useNavigate()
 
     const submit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -46,6 +50,9 @@ export default function BookForm() {
 
     return (
         <form onSubmit={submit} style={{ padding: 24, display: 'grid', gap: 12, maxWidth: 420 }}>
+            <div className='goBackToHomePage' onClick={() => navigate('/')}>
+                <label>Go Back To Home Page</label>
+            </div>
             <h2>Add a Book</h2>
             <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
             <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
