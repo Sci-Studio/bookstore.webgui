@@ -2,12 +2,21 @@
   background-color: #F7F7F7;
 }
 
-header {
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.headerContainer {
   display: flex;
   flex-direction: row;
   height: 40px;
   background-color: #FFFFFF;
   padding: 30px;
+  width: 1232px;
 }
 
 .logo {
@@ -58,6 +67,10 @@ header {
 
 .mainContainer {
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .addBooksTitle {
@@ -69,6 +82,7 @@ header {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 1232px;
 
   p {
     font-family: 'Inter', sans-serif;
@@ -120,8 +134,15 @@ header {
 
 .bookListSection{
   width: 1232px;
-  height: 500px;
+  height: 756px;
   padding: 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.footerSection {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }

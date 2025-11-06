@@ -2,9 +2,12 @@ import { useNavigate } from 'react-router-dom'
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
+import leftArrow from './assets/svg/left_arrow.svg';
+import rightArrow from './assets/svg/right_arrow.svg';
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Book  from './widgets/book-tile/Book'
+import FooterButton from './widgets/footer-button/FooterButton';
 import type { IBook }  from './widgets/book-tile/Book'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
@@ -20,16 +23,18 @@ export default function App() {
 
   return (
     <div>
-      <header>
-        <div className='logo'>
-          <div className='ImageContainer'>
-            <img className='logoImage' src={myLogo} alt="Logo"/>
+      <header className='header'>
+        <div className='headerContainer'>
+          <div className='logo'>
+            <div className='ImageContainer'>
+              <img className='logoImage' src={myLogo} alt="Logo"/>
+            </div>
+            <label className='logoLabel'>BookLibrary</label>
           </div>
-          <label className='logoLabel'>BookLibrary</label>
-        </div>
-        <div className='navigation'>
-          <div>Dashboard</div>
-          <div>Add Book</div>
+          <div className='navigation'>
+            <div>Dashboard</div>
+            <div>Add Book</div>
+          </div>
         </div>
       </header>
       <main className='mainContainer'>
@@ -56,6 +61,10 @@ export default function App() {
                 imageUrl={b.imageUrl}
               />
             ))}
+        </div>
+        <div className='footerSection'>
+            <FooterButton imageUrl={leftArrow}></FooterButton>
+            <FooterButton imageUrl={rightArrow}></FooterButton>
         </div>
       </main>
     </div>
