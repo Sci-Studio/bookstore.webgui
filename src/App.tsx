@@ -2,8 +2,21 @@
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import Book  from './widgets/book-tile/Book'
+import type { IBook }  from './widgets/book-tile/Book'
+
+const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
 export default function App() {
+  const [books, setBooks] = useState<Array<IBook>>([])
+
+
+  useEffect(() => {
+      axios.get(`${API_BASE}/books`).then(r => setBooks(r.data))
+  }, [])
+
   return (
     <div>
       <header>
@@ -18,7 +31,7 @@ export default function App() {
           <div>Add Book</div>
         </div>
       </header>
-      <main>
+      <main className='mainContainer'>
         <div className='addBooksSection'>
           <div className='addBooksTitle'>
             <h2>My Books</h2>
@@ -28,6 +41,20 @@ export default function App() {
             <img className='addImage' src={add} alt="add"/>
             <label>Add New Book</label>
           </div>
+        </div>
+        <div className='searchSection'>
+
+        </div>
+        <div className='bookListSection'>
+            {books.map((b, idx) => (
+              <Book
+                key={idx}
+                title={b.title}
+                author={b.author}
+                priceCents={b.priceCents}
+                imageUrl={b.imageUrl}
+              />
+            ))}
         </div>
       </main>
     </div>
