@@ -1,13 +1,11 @@
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, NavLink } from 'react-router-dom'
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
-import leftArrow from './assets/svg/left_arrow.svg';
-import rightArrow from './assets/svg/right_arrow.svg';
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Book  from './widgets/book-tile/Book'
-import FooterButton from './widgets/footer-button/FooterButton';
+import FooterNavigator from './components/footer-navigator/FooterNavigator';
 import type { IBook }  from './widgets/book-tile/Book'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
@@ -32,8 +30,8 @@ export default function App() {
             <label className='logoLabel'>BookLibrary</label>
           </div>
           <div className='navigation'>
-            <div>Dashboard</div>
-            <div>Add Book</div>
+            <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Dashboard</NavLink>
+            <NavLink to="/books/new" className={({ isActive }) => isActive ? 'active-link' : ''}>Add Book</NavLink>
           </div>
         </div>
       </header>
@@ -62,9 +60,8 @@ export default function App() {
               />
             ))}
         </div>
-        <div className='footerSection'>
-            <FooterButton imageUrl={leftArrow}></FooterButton>
-            <FooterButton imageUrl={rightArrow}></FooterButton>
+        <div>
+          <FooterNavigator></FooterNavigator>
         </div>
       </main>
     </div>
