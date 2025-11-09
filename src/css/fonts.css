@@ -1,0 +1,7 @@
+/* Import the Inter font family with common weights */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Optional: define a global rule for all text */
+body {
+  font-family: 'Inter', sans-serif;
+}

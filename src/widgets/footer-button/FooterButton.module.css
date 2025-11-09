@@ -1,0 +1,19 @@
+.button {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: solid #E5E7EB;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 10px;
+    height: 16px;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
