@@ -3,11 +3,13 @@ import add from '../../assets/svg/add.svg';
 import { useNavigate } from 'react-router-dom'
 import ToolBar from '../../components/tool-bar/ToolBar';
 import BooksList from '../../components/books-list/BooksList';
+import { useState } from 'react';
 
 export default function HomePage() {
 
     const navigate = useNavigate()
 
+    const [filter, setFiltered] = useState<string>("");
 
     return (
         <main className={styles.main}>
@@ -22,10 +24,10 @@ export default function HomePage() {
                 </div>
             </div>
             <div className={styles.toolBarSection}>
-                <ToolBar></ToolBar>
+                <ToolBar onSearch={(query) => setFiltered(query)}></ToolBar>
             </div>
             <div className={styles.bookListSection}>
-                <BooksList></BooksList>
+                <BooksList filter={filter}></BooksList>
             </div>
         </main>
     )

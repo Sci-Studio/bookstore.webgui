@@ -10,13 +10,19 @@ const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
 const BOOKS_PER_PAGE = 8;
 
-export default function BooksList() {
+interface IBooksListProps {
+  filter?: string
+}
+
+export default function BooksList({ filter = '' }: IBooksListProps) {
 
     const [books, setBooks] = useState<Array<IBook>>([])
+    const [filtered, setFiltered] = useState<Array<IBook>>([]);
     const [page, setPage] = useState(0);
+
     const startIndex = page * BOOKS_PER_PAGE;
-    const visibleBooks = books.slice(startIndex, startIndex + BOOKS_PER_PAGE);
-    const totalPages = Math.ceil(books.length / BOOKS_PER_PAGE);
+    const visibleBooks = filtered.slice(startIndex, startIndex + BOOKS_PER_PAGE);
+    const totalPages = Math.ceil(filtered.length / BOOKS_PER_PAGE);
 
     const getVisiblePages = () => {
         if (totalPages <= 4) {
@@ -35,6 +41,17 @@ export default function BooksList() {
     useEffect(() => {
         axios.get(`${API_BASE}/books`).then(r => setBooks(r.data))
     }, [])
+
+    useEffect(() => {
+      const q = filter.toLowerCase();
+      setFiltered(
+        books.filter(
+          (b) =>
+            b.title.toLowerCase().includes(q) ||
+            b.author.toLowerCase().includes(q)
+        )
+      );
+    }, [filter, books]);
 
     return (
         <main>
