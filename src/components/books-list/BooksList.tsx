@@ -71,8 +71,9 @@ export default function BooksList({ filter = '' }: IBooksListProps) {
                     imageUrl={leftArrow}
                     disabled={page === 0}
                     onClick={() => setPage((p) => Math.max(p - 1, 0))}></FooterButton>
-                {visiblePages.map((p) => (
+                {visiblePages.map((p, idx) => (
                     <FooterButton
+                        key={idx}
                         text={p.toString()}
                         onClick={() => setPage(p - 1)}></FooterButton>
                 ))}

@@ -49,17 +49,19 @@ export default function BookForm() {
 
 
     return (
-        <form onSubmit={submit} style={{ padding: 24, display: 'grid', gap: 12, maxWidth: 420 }}>
-            <div className='goBackToHomePage' onClick={() => navigate('/')}>
-                <label>Go Back To Home Page</label>
-            </div>
-            <h2>Add a Book</h2>
-            <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
-            <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
-            <input placeholder="Price (€)" value={price} onChange={e=>setPrice(e.target.value)} type="number" min="0" step="0.01" required />
-            <input type="file" accept="image/*" onChange={(e) => setImageFile(e.target.files?.[0] || null)}/>
-            <button type="submit">{uploading ? 'Uploading...' : 'Save'}</button>
-            <div>{msg}</div>
-        </form>
+        <main>
+            <form onSubmit={submit} style={{ padding: 24, display: 'grid', gap: 12, maxWidth: 420 }}>
+                <div className='goBackToHomePage' onClick={() => navigate('/')}>
+                    <label>Go Back To Home Page</label>
+                </div>
+                <h2>Add a Book</h2>
+                <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
+                <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
+                <input placeholder="Price (€)" value={price} onChange={e=>setPrice(e.target.value)} type="number" min="0" step="0.01" required />
+                <input type="file" accept="image/*" onChange={(e) => setImageFile(e.target.files?.[0] || null)}/>
+                <button type="submit">{uploading ? 'Uploading...' : 'Save'}</button>
+                <div>{msg}</div>
+            </form>
+        </main>
     )
 }

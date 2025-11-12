@@ -26,8 +26,8 @@ export default function HeaderBar() {
                         <h1 className={styles.logoLabel}>BookLibrary</h1>
                     </div>
                     <div className={styles.navigation}>
-                        {navigationList.map((navItem) => (
-                            <div className={styles.navContainer}>
+                        {navigationList.map((navItem, idx) => (
+                            <div key={idx} className={styles.navContainer}>
                                 <NavLink 
                                     to={navItem.link} 
                                     className={({ isActive }) => isActive ? styles.activeLink : ''}>
