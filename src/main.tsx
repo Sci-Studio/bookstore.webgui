@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
 import Books from './pages/Books'
 import BookForm from './pages/BookForm'
+import './index.css'
 
 
 const router = createBrowserRouter([

@@ -1,42 +1,154 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  background-color: #F7F7F7;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: row;
+  height: 40px;
+  background-color: #FFFFFF;
+  padding: 30px;
+  width: 1232px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.logoImage {
+  width: 15.75px;
+  height: 18px;
+}
+
+.ImageContainer{
+  width: 40px;
+  height: 40px;
+  background-color: #6A0572;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+}
+
+.logoLabel {
+  padding: 10px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.navigation {
+  display: flex;
+  height: 32px;
+
+  a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 16px; 
+    width: 84px;
+    height: 24px;
+    padding: 13px;
+    color: #4B5563;
+    text-decoration: none;
+
+    &.active-link {
+      color: #6A0572;
+    }
   }
-  to {
-    transform: rotate(360deg);
+}
+
+.navigation a:last-child {
+  padding-right: 0px;
+}
+
+.navLabel {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.mainContainer {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.addBooksTitle {
+  flex: 1;
+}
+
+.addBooksSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 1232px;
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.button {
+  background-color: #6A0572;
+  border-radius: 16px;
+  border-color: #E5E7EB;
+  width: 188px;
+  height: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  label {
+    width: 118px;
+    height: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
   }
 }
 
-.card {
-  padding: 2em;
+.button:hover {
+  transition: transform 160ms ease;
+  transform: scale(1.04);
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
 }
 
-.read-the-docs {
-  color: #888;
+.addImage {
+  width: 13px;
+  height: 13px;
+  padding: 8px;
+}
+
+.bookListSection{
+  width: 1232px;
+  height: 756px;
+  padding: 24px;
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
