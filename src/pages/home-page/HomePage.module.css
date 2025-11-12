@@ -1,43 +1,43 @@
-#root {
-  background-color: #F7F7F7;
-}
-
-.appContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.mainContainer {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.main {
+    width: 1280px;
+    height: 1170px;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
 .addBooksTitle {
-  flex: 1;
+    flex: 1;
+    width: 392px;
+    height: 68px;
+
+    p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      height: 24px;
+      margin: 0px;
+      margin-top: 8px;
+    }
+
+    h2 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 30px;
+      height: 36px;
+      margin: 0px;
+    }
 }
 
 .addBooksSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 1232px;
-
-  p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-  }
-
-  h2 {
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 30px;
-  }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 1232px; 
+    height: 68px;
+    margin-top: 47.5px;
+    align-items: center;
 }
 
 .button {

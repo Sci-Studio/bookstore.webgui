@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import './App.css'
 import add from './assets/svg/add.svg';
 import HeaderBar from './components/header-bar/HeaderBar'
+import HomePage from './pages/home-page/HomePage'
 import BooksList from './components/books-list/BooksList';
 
 export default function App() {
@@ -9,9 +10,10 @@ export default function App() {
   const navigate = useNavigate()
 
   return (
-    <div>
+    <div className='appContainer'>
       <HeaderBar></HeaderBar>
-      <main className='mainContainer'>
+      <HomePage></HomePage>
+      {/* <main className='mainContainer'>
         <div className='addBooksSection'>
           <div className='addBooksTitle'>
             <h2>My Books</h2>
@@ -28,7 +30,7 @@ export default function App() {
         <div className='bookListSection'>
           <BooksList></BooksList>
         </div>
-      </main>
+      </main> */}
     </div>
   )
 }
