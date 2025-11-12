@@ -18,6 +18,20 @@ export default function BooksList() {
     const visibleBooks = books.slice(startIndex, startIndex + BOOKS_PER_PAGE);
     const totalPages = Math.ceil(books.length / BOOKS_PER_PAGE);
 
+    const getVisiblePages = () => {
+        if (totalPages <= 4) {
+          return Array.from({ length: totalPages }, (_, i) => i + 1);
+        }
+
+        if (page < 2) return [1, 2, 3, totalPages];
+        if (page >= totalPages - 2)
+          return [1, totalPages - 2, totalPages - 1, totalPages];
+
+        return [1, page, page + 1, totalPages];
+    };
+
+    const visiblePages = getVisiblePages();
+
     useEffect(() => {
         axios.get(`${API_BASE}/books`).then(r => setBooks(r.data))
     }, [])
@@ -40,6 +54,12 @@ export default function BooksList() {
                     imageUrl={leftArrow}
                     disabled={page === 0}
                     onClick={() => setPage((p) => Math.max(p - 1, 0))}></FooterButton>
+                {visiblePages.map((p) => (
+                    <FooterButton
+                        text={p.toString()}
+                        onClick={() => setPage(p - 1)}></FooterButton>
+                ))}
+                {totalPages > 4 && page < totalPages - 3 && <span>…</span>}
                 <FooterButton 
                     imageUrl={leftArrow}
                     rotate
