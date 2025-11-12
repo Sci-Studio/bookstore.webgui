@@ -36,8 +36,15 @@ export default function BooksList() {
                 ))}
             </div>
             <div className={styles.footer}>
-                <FooterButton imageUrl={leftArrow} onClick={() => setPage((p) => Math.max(p - 1, 0))}></FooterButton>
-                <FooterButton imageUrl={leftArrow} rotate onClick={(() => setPage((p) => Math.min(p + 1, totalPages - 1)))}></FooterButton>
+                <FooterButton 
+                    imageUrl={leftArrow}
+                    disabled={page === 0}
+                    onClick={() => setPage((p) => Math.max(p - 1, 0))}></FooterButton>
+                <FooterButton 
+                    imageUrl={leftArrow}
+                    rotate
+                    disabled={page >= totalPages - 1}
+                    onClick={(() => setPage((p) => Math.min(p + 1, totalPages - 1)))}></FooterButton>
             </div>
         </main>
     )

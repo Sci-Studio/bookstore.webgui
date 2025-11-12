@@ -2,7 +2,6 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
-import FooterNavigator from './components/footer-navigator/FooterNavigator';
 import BooksList from './components/books-list/BooksList';
 
 export default function App() {
@@ -42,9 +41,6 @@ export default function App() {
         <div className='bookListSection'>
           <BooksList></BooksList>
         </div>
-        {/* <div>
-          <FooterNavigator></FooterNavigator>
-        </div> */}
       </main>
     </div>
   )
