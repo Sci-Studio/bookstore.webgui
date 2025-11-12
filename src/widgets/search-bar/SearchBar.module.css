@@ -1,0 +1,28 @@
+.searchBarContainer {
+    width: 732px;
+    height: 48px;
+    border: 1px solid;
+    border-color: #E5E7EB;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: #F9FAFB;
+    border-radius: 16px;
+}
+
+.searchBarContainer:focus-within {
+    border: 2px solid;
+    border-color: #6A0572;
+}
+.textInput {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    background-color: #F9FAFB;
+}
+
+.img {
+    width: 16px;
+    height: 24px;
+    padding: 0px 10px;
+}
