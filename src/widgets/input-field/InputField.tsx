@@ -1,0 +1,33 @@
+import { useState } from 'react';
+import styles from './InputField.module.css'
+
+export interface IInputFieldProps { 
+    text?: string | null,
+    imageUrl?: string | null,
+    placeholder?: string,
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+ }
+
+export default function InputField({ text = null, imageUrl = null, placeholder = '', onChange }: IInputFieldProps) {
+    const [value, setValue] = useState('')
+    
+    const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        setValue(e.target.value);
+        if (onChange) {
+            onChange(e);
+        }
+    }
+    return (
+        <main>
+            <div className={styles.container}>
+                <div className={styles.header}>
+                    { imageUrl && <img className={styles.img} src={imageUrl}/> }
+                    { text && <label>{text}</label> }
+                </div>
+                <div className={styles.input}>
+                    <input placeholder={placeholder} value={value} onChange={ e => onValueChange(e)} required />
+                </div>
+            </div>
+        </main>
+    )
+}
