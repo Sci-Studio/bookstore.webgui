@@ -1,6 +1,7 @@
 import styles from './HomePage.module.css';
 import add from '../../assets/svg/add.svg';
 import { useNavigate } from 'react-router-dom'
+import ToolBar from '../../components/tool-bar/ToolBar';
 import BooksList from '../../components/books-list/BooksList';
 
 export default function HomePage() {
@@ -19,6 +20,9 @@ export default function HomePage() {
                     <img className={styles.addImage} src={add} alt="add"/>
                     <label>Add New Book</label>
                 </div>
+            </div>
+            <div className={styles.toolBarSection}>
+                <ToolBar></ToolBar>
             </div>
             <div className={styles.bookListSection}>
                 <BooksList></BooksList>

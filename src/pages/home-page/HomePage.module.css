@@ -75,6 +75,11 @@
   padding: 8px;
 }
 
+.toolBarSection {
+    margin-top: 32px;
+}
+
 .bookListSection{
-  width: 1232px;
+    width: 1232px;
+    margin-top: 42px;
 }

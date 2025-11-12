@@ -1,0 +1,15 @@
+
+.container {
+    width: 1232px;
+    height: 98px;
+    background-color: #FFFFFF;
+    border-radius: 24px;
+    border-color: #F3F4F6;
+}
+
+.toolsContainer {
+    width: 1182px;
+    height: 48px;
+    display: flex;
+    flex-direction: row;
+}
