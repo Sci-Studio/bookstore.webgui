@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import App from './App'
-import BookForm from './pages/book-form/BookForm'
+// import BookForm from './pages/book-form/BookForm'
 import HomePage from './pages/home-page/HomePage'
+import AddBookPage from './pages/add-book-page/AddBookPage'
 import './index.css'
 
 
@@ -13,7 +14,7 @@ const router = createBrowserRouter([
     element: <App />,  
     children: [
       { index: true, element: <HomePage /> }, 
-      { path: 'books/new', element: <BookForm /> }, 
+      { path: 'books/new', element: <AddBookPage /> }, 
     ],
   },
 ])
