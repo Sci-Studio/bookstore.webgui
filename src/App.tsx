@@ -2,22 +2,12 @@ import { useNavigate, NavLink } from 'react-router-dom'
 import './App.css'
 import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import Book  from './widgets/book-tile/Book'
 import FooterNavigator from './components/footer-navigator/FooterNavigator';
-import type { IBook }  from './widgets/book-tile/Book'
-
-const API_BASE = import.meta.env.VITE_API_BASE || '/api'
+import BooksList from './components/books-list/BooksList';
 
 export default function App() {
-  const [books, setBooks] = useState<Array<IBook>>([])
 
   const navigate = useNavigate()
-
-  useEffect(() => {
-      axios.get(`${API_BASE}/books`).then(r => setBooks(r.data))
-  }, [])
 
   return (
     <div>
@@ -50,27 +40,12 @@ export default function App() {
 
         </div>
         <div className='bookListSection'>
-            {books.map((b, idx) => (
-              <Book
-                key={idx}
-                title={b.title}
-                author={b.author}
-                priceCents={b.priceCents}
-                imageUrl={b.imageUrl}
-              />
-            ))}
+          <BooksList></BooksList>
         </div>
-        <div>
+        {/* <div>
           <FooterNavigator></FooterNavigator>
-        </div>
+        </div> */}
       </main>
     </div>
-    // <main style={{ padding: 24 }}>
-    //   <h1>📚 My Bookstore</h1>
-    //   <nav style={{ display: 'flex', gap: 12 }}>
-    //     <Link to="/books">Books</Link>
-    //     <Link to="/books/new">Add Book</Link>
-    //   </nav>
-    // </main>
   )
 }

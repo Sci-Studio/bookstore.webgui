@@ -1,0 +1,15 @@
+.booksList {
+    width: 1232px;
+    height: 756px;
+    padding: 24px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 4fr);
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
