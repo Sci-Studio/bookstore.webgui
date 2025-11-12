@@ -1,7 +1,7 @@
-import { useNavigate, NavLink } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import './App.css'
-import myLogo from './assets/svg/logo.svg';
 import add from './assets/svg/add.svg';
+import HeaderBar from './components/header-bar/HeaderBar'
 import BooksList from './components/books-list/BooksList';
 
 export default function App() {
@@ -10,20 +10,7 @@ export default function App() {
 
   return (
     <div>
-      <header className='header'>
-        <div className='headerContainer'>
-          <div className='logo'>
-            <div className='ImageContainer'>
-              <img className='logoImage' src={myLogo} alt="Logo"/>
-            </div>
-            <label className='logoLabel'>BookLibrary</label>
-          </div>
-          <div className='navigation'>
-            <NavLink to="/" className={({ isActive }) => isActive ? 'active-link' : ''}>Dashboard</NavLink>
-            <NavLink to="/books/new" className={({ isActive }) => isActive ? 'active-link' : ''}>Add Book</NavLink>
-          </div>
-        </div>
-      </header>
+      <HeaderBar></HeaderBar>
       <main className='mainContainer'>
         <div className='addBooksSection'>
           <div className='addBooksTitle'>
