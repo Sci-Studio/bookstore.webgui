@@ -2,8 +2,12 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import styles from './AddBookPage.module.css';
 import PushButton from '../../widgets/push-button/PushButton';
+import InputField from '../../widgets/input-field/InputField';
 import add from '../../assets/svg/add.svg';
+import authorLogo from '../../assets/svg/author.svg';
+import dollarLogo from '../../assets/svg/dollar.svg';
 import close from '../../assets/svg/close.svg';
+import bookLogo from '../../assets/svg/book.svg';
 import axios from 'axios'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
@@ -57,7 +61,13 @@ export default function AddBookPage() {
             </div>
             <div className={styles.bookForm}>
                 <form className={styles.formContainer}>
-                    <div className={styles.bookParameter}></div>
+                    <div className={styles.bookParameter}>
+                        <InputField text='Book Name' className={styles.inputBookName} imageUrl={bookLogo} placeholder='Enter the book title' onChange={(e) => setTitle(e.target.value)}></InputField>
+                        <div className={styles.authorPrice}>
+                            <InputField text='Author' className={styles.inputAuthorPrice} imageUrl={authorLogo} placeholder='Enter author name' onChange={(e) => setAuthor(e.target.value)}></InputField>
+                            <InputField text='Price' className={styles.inputAuthorPrice} imageUrl={dollarLogo} placeholder='0.00' onChange={(e) => setPrice(e.target.value)}></InputField>
+                        </div>
+                    </div>
                     <div className={styles.bookImage}></div>
                     <div className={styles.formControls}>
                         <PushButton imageUrl={close} text='Cancel' className={styles.cancelButton} onClick={() => navigate('/')}></PushButton>

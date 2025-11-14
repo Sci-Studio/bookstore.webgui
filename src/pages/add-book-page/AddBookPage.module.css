@@ -54,6 +54,7 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin-top: 49px;
 }
 
 .formControls {
@@ -78,8 +79,30 @@
         color: var(--cancel-button-label-color);
     }
 }
+
 .addButton {
     background-color: var(--magenta-button-label-color);
     width: 385px;
     height: 80px;
+}
+
+.inputBookName {
+    input {
+        width: 798px;
+        height: 76px;
+    }
+}
+
+.authorPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 32px;
+}
+
+.inputAuthorPrice {
+    input {
+        width: 383px;
+        height: 76px;
+    }
 }
