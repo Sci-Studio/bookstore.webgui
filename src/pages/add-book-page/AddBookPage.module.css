@@ -43,10 +43,36 @@
     background-color: var(--main-white-background-color);
     border-color: var(--medium-grey-border-color);
     border-radius: 24px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .formContainer {
     width: 798px;
     height: 868px;
-    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.formControls {
+    justify-content: space-between;
+    width: 798px;
+    height: 112px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cancelButton {
+    width: 385px;
+    height: 80px;
+    border-color: var(--cancel-button-border-color);
+    border: 2px solid; 
+}
+.addButton {
+    background-color: var(--magenta-button-label-color);
+    width: 385px;
+    height: 80px;
 }
