@@ -54,7 +54,7 @@
     height: 32px;
     font-family: 'Inter', sans-serif;
     font-weight: var(--font-weight-bold);
-    font-size: 24px;
+    font-size: var(--font-size-xl);
 }
 
 .navigation {
@@ -71,7 +71,7 @@
     a {
         font-family: 'Inter', sans-serif;
         font-weight: var(--font-weight-regular);
-        font-size: 16px;
+        font-size: var(--font-size-md);
         text-decoration: none;
         color: var(--header-label-color);
 

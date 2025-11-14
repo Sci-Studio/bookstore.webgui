@@ -16,7 +16,7 @@
     height: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: var(--font-weight-regular);
-    font-size: 16px;
+    font-size: var(--font-size-md);
     color: var(--main-white-background-color);
     display: flex;
     align-items: center;

@@ -29,7 +29,7 @@
         height: 24px;
         font-family: 'Inter', sans-serif;
         font-weight: var(--font-weight-semibold);
-        font-size: 16px;
+        font-size: var(--font-size-md);
     }
 
     p {
@@ -37,7 +37,7 @@
         height: 20px;
         font-family: 'Inter', sans-serif;
         font-weight: var(--font-weight-regular);
-        font-size: 14px;
+        font-size: var(--font-size-sm);
     }
 
     div {
@@ -45,7 +45,7 @@
         height: 36px;
         font-family: 'Inter', sans-serif;
         font-weight: var(--font-weight-bold);
-        font-size: 18px;
+        font-size: var(--font-size-mlg);
     }
 }
 
@@ -58,5 +58,5 @@
     align-items: center;
     justify-content: center;
     color: #999;
-    font-size: 12px;
+    font-size: var(--font-size-xs);
 }
