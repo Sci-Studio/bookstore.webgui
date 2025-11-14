@@ -6,9 +6,10 @@ export interface IInputFieldProps {
     imageUrl?: string | null,
     placeholder?: string,
     onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    className?: string;
  }
 
-export default function InputField({ text = null, imageUrl = null, placeholder = '', onChange }: IInputFieldProps) {
+export default function InputField({ text = null, imageUrl = null, placeholder = '', onChange, className = '' }: IInputFieldProps) {
     const [value, setValue] = useState('')
     
     const onValueChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,10 +23,10 @@ export default function InputField({ text = null, imageUrl = null, placeholder =
             <div className={styles.container}>
                 <div className={styles.header}>
                     { imageUrl && <img className={styles.img} src={imageUrl}/> }
-                    { text && <label>{text}</label> }
+                    { text && <label className={styles.label}>{text}</label> }
                 </div>
-                <div className={styles.input}>
-                    <input placeholder={placeholder} value={value} onChange={ e => onValueChange(e)} required />
+                <div>
+                    <input className={styles.input} placeholder={placeholder} value={value} onChange={ e => onValueChange(e)} required />
                 </div>
             </div>
         </main>
