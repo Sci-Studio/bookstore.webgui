@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    border: none;
+    background-color: var(--search-bar-background-color);
+    border-radius: 24px;
+}
+
+.label {
+    height: 28px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--input-field-label-color);
+}
