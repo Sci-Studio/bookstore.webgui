@@ -13,6 +13,7 @@
 
     /* label colors */
     --header-label-color: #4B5563;
+    --input-field-label-color: #1F2937;;
     --add-book-page-color: #111827;
     --cancel-button-label-color: #6B7280;
 }
