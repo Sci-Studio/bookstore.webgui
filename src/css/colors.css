@@ -11,5 +11,6 @@
     --search-bar-background-color: #F9FAFB;
 
     /* label colors */
-    --header-label-color: #4B5563
+    --header-label-color: #4B5563;
+    --input-field-label-color: #1F2937;
 }

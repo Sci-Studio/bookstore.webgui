@@ -20,7 +20,7 @@ export default function InputField({ text = null, imageUrl = null, placeholder =
     }
     return (
         <main>
-            <div className={styles.container}>
+            <div className={`${styles.container} ${className || ''}`}>
                 <div className={styles.header}>
                     { imageUrl && <img className={styles.img} src={imageUrl}/> }
                     { text && <label className={styles.label}>{text}</label> }
