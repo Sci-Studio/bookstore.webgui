@@ -1,3 +1,5 @@
+@import '../../css/fonts.css';
+
 .button {
   border-radius: 16px;
   border-color: #E5E7EB;
@@ -8,8 +10,8 @@
 
   label {
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-md);
     color: var(--main-white-background-color);
     display: flex;
     align-items: center;
