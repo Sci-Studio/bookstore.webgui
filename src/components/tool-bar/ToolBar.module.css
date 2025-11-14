@@ -4,7 +4,7 @@
     height: 98px;
     background-color: #FFFFFF;
     border-radius: 24px;
-    border-color: #F3F4F6;
+    border-color: var(--medium--grey-border-color);
     display: flex;
     align-items: center;
     justify-content: center;

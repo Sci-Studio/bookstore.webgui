@@ -2,7 +2,7 @@
     width: 732px;
     height: 48px;
     border: 1px solid;
-    border-color: #E5E7EB;
+    border-color: var(--light--grey-border-color);
     display: flex;
     flex-direction: row;
     align-items: center;
