@@ -3,6 +3,7 @@ import add from '../../assets/svg/add.svg';
 import { useNavigate } from 'react-router-dom'
 import ToolBar from '../../components/tool-bar/ToolBar';
 import BooksList from '../../components/books-list/BooksList';
+import PushButton from '../../widgets/push-button/PushButton';
 import { useState } from 'react';
 
 export default function HomePage() {
@@ -18,10 +19,7 @@ export default function HomePage() {
                     <h2>My Books</h2>
                     <p>Browse and manage your personal library connection</p>
                 </div>
-                <div className={styles.button} onClick={() => navigate('/books/new')}>
-                    <img className={styles.addImage} src={add} alt="add"/>
-                    <label>Add New Book</label>
-                </div>
+                <PushButton imageUrl={add} text='Add New Book' className={styles.addButton} onClick={() => navigate('/books/new')}></PushButton>
             </div>
             <div className={styles.toolBarSection}>
                 <ToolBar onSearch={(query) => setFiltered(query)}></ToolBar>
