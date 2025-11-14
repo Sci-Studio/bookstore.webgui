@@ -55,7 +55,6 @@ export default function BookForm() {
                 <label>Go Back To Home Page</label>
             </div>
             <h2>Add a Book</h2>
-            <InputField text='Book Name' imageUrl={bookLogo}></InputField>
             <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
             <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
             <input placeholder="Price (€)" value={price} onChange={e=>setPrice(e.target.value)} type="number" min="0" step="0.01" required />
