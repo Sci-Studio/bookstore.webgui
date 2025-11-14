@@ -1,3 +1,5 @@
+@import '../../css/colors.css';
+
 .main {
     width: 1280px;
     height: 1170px;
@@ -57,7 +59,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--main-white-background-color);;
     display: flex;
     align-items: center;
   }

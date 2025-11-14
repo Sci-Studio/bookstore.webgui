@@ -1,10 +1,11 @@
+@import '../../css/colors.css';
 
 .container {
     width: 1232px;
     height: 98px;
-    background-color: #FFFFFF;
+    background-color: var(--main-white-background-color);;
     border-radius: 24px;
-    border-color: var(--medium--grey-border-color);
+    border-color: var(--medium-grey-border-color);
     display: flex;
     align-items: center;
     justify-content: center;

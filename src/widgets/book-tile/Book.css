@@ -1,3 +1,5 @@
+@import '../../css/colors.css';
+
 .container:hover {
     transition: transform 160ms ease;
     transform: scale(1.04);
@@ -7,7 +9,7 @@
 .container {
     width: 290px;
     height: 354px;
-    background-color: #FFFFFF;
+    background-color: var(--main-white-background-color);
     border-radius: 24px;
     justify-content: center;
     display: flex;
