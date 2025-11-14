@@ -1,4 +1,5 @@
 @import '../../css/colors.css';
+@import '../../css/fonts.css';
 
 .container:hover {
     transition: transform 160ms ease;
@@ -28,24 +29,24 @@
         width: 240px;
         height: 24px;
         font-family: 'Inter', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
+        font-weight: var(--font-weight-semibold);
+        font-size: var(--font-size-md);
     }
 
     p {
         width: 240px;
         height: 20px;
         font-family: 'Inter', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
+        font-weight: var(--font-weight-regular);
+        font-size: var(--font-size-sm);
     }
 
     div {
         width: 240px;
         height: 36px;
         font-family: 'Inter', sans-serif;
-        font-weight: 700;
-        font-size: 18px;
+        font-weight: var(--font-weight-bold);
+        font-size: var(--font-size-mlg);
     }
 }
 
@@ -58,5 +59,5 @@
     align-items: center;
     justify-content: center;
     color: #999;
-    font-size: 12px;
+    font-size: var(--font-size-xs);
 }
