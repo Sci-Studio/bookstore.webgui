@@ -1,7 +1,9 @@
+@import '../css/colors.css';
+
 .goBackToHomePage {
-  background-color: #6A0572;
+  background-color: var(--magenta-button-label-color);
   border-radius: 16px;
-  border-color: #E5E7EB;
+  border-color: var(--light--grey-border-color);
   width: 188px;
   height: 48px;
   display: flex;
@@ -15,7 +17,7 @@
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    color: #FFFFFF;
+    color: var(--main-white-background-color);
     display: flex;
     align-items: center;
   }

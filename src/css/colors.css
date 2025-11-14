@@ -1,0 +1,15 @@
+
+:root {
+    /* border colors */
+    --light--grey-border-color: #E5E7EB;
+    --medium-grey-border-color: #F3F4F6;
+
+    /* background colors */
+    --main-page-background-color: #F7F7F7;
+    --main-white-background-color: #FFFFFF;
+    --magenta-button-label-color: #6A0572;
+    --search-bar-background-color: #F9FAFB;
+
+    /* label colors */
+    --header-label-color: #4B5563
+}
