@@ -1,24 +1,26 @@
+@import '../../css/colors.css';
+
 .searchBarContainer {
     width: 732px;
     height: 48px;
     border: 1px solid;
-    border-color: #E5E7EB;
+    border-color: var(--light--grey-border-color);
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #F9FAFB;
+    background-color: var(--search-bar-background-color);
     border-radius: 16px;
 }
 
 .searchBarContainer:focus-within {
     border: 2px solid;
-    border-color: #6A0572;
+    border-color: var(--magenta-button-label-color);
 }
 .textInput {
     outline: none;
     border: none;
     box-shadow: none;
-    background-color: #F9FAFB;
+    background-color: var(--search-bar-background-color);
 }
 
 .img {
