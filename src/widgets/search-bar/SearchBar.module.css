@@ -12,7 +12,7 @@
 
 .searchBarContainer:focus-within {
     border: 2px solid;
-    border-color: #6A0572;
+    border-color: var(--magenta-button-label-color);
 }
 .textInput {
     outline: none;

@@ -1,7 +1,7 @@
 @import '../css/colors.css';
 
 .goBackToHomePage {
-  background-color: #6A0572;
+  background-color: var(--magenta-button-label-color);
   border-radius: 16px;
   border-color: var(--light--grey-border-color);
   width: 188px;
