@@ -1,3 +1,5 @@
+@import '../../css/colors.css';
+
 .main {
     width: 1152px;
     height: 1694px;
@@ -21,7 +23,7 @@
     font-weight: 700;
     font-size: 36px;
     height: 44px;
-    color: #111827;
+    color: var(--add-book-page-color);
 }
 
 .addBookSubtitle{
@@ -29,7 +31,7 @@
     font-weight: 400;
     font-size: 20px;
     height: 56px;
-    color: #4B5563;
+    color: var(--header-label-color);
     word-wrap: break-word;
     width: 672px;
     text-align: center;
@@ -38,8 +40,8 @@
 .bookForm {
     width: 868px;
     height: 966px;
-    background-color: #FFFFFF;
-    border-color: #F3F4F6;
+    background-color: var(--main-white-background-color);
+    border-color: var(--medium-grey-border-color);
     border-radius: 24px;
 }
 
