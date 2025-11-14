@@ -1,3 +1,5 @@
+@import '../../css/colors.css';
+
 .searchBarContainer {
     width: 732px;
     height: 48px;
@@ -6,7 +8,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: #F9FAFB;
+    background-color: var(--search-bar-background-color);
     border-radius: 16px;
 }
 
@@ -18,7 +20,7 @@
     outline: none;
     border: none;
     box-shadow: none;
-    background-color: #F9FAFB;
+    background-color: var(--search-bar-background-color);
 }
 
 .img {

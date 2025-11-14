@@ -73,7 +73,7 @@
         font-weight: 400;
         font-size: 16px;
         text-decoration: none;
-        color: #4B5563;
+        color: var(--header-label-color);
 
         &.activeLink {
             color: var(--magenta-button-label-color);
