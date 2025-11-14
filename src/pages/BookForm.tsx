@@ -2,8 +2,6 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './BookForm.css'
-import InputField from '../widgets/input-field/InputField'
-import bookLogo from '../assets/svg/logo.svg'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
