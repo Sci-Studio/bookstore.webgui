@@ -1,0 +1,59 @@
+@import '../../css/fonts.css';
+
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.label {
+    padding-left: 10px;
+}
+
+.dragDropArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.dragDropImage {
+    background-color: #FF4500;
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 37.5px;
+        height: 26px;
+    }
+}
+
+.title {
+    margin-top: 24px;
+    font-family: 'Inter', sans-serif;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xl);
+}
+
+.subTitle {
+    margin-top: 8px;
+    font-family: 'Inter', sans-serif;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-mlg);
+}
+
+.supportedFormats{
+    margin-top: 16px;
+    font-family: 'Inter', sans-serif;
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size-sm);
+}
+
+.dragOver {
+    pointer-events: none;
+}
