@@ -2,9 +2,7 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import './BookForm.css'
-import DragDropFile from '../widgets/drag-drop-files/DragDropFile';
-import coverImage from '../assets/svg/cover_image.svg';
-import uploadImage from '../assets/svg/upload.svg';
+
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
 
 
@@ -15,10 +13,6 @@ export default function BookForm() {
     const [imageFile, setImageFile] = useState<File | null>(null)
     const [msg, setMsg] = useState('')
     const [uploading, setUploading] = useState(false)
-
-    const dropTitle = 'Upload Book Cover';
-    const dropSubTitle = 'Click to browse or drag your image here';
-    const dropSupportedFormats = 'Supports PNG, JPG, JPEG up to 10MB';
 
     const navigate = useNavigate()
 
@@ -58,13 +52,6 @@ export default function BookForm() {
             <div className='goBackToHomePage' onClick={() => navigate('/')}>
                 <label>Go Back To Home Page</label>
             </div>
-            <DragDropFile label='Book Cover Image'
-                          labelImageUrl={coverImage}
-                          imageUrl={uploadImage}
-                          title={dropTitle}
-                          subTitle={dropSubTitle}
-                          supportedFormats={dropSupportedFormats}
-                          onFile={(e) => setImageFile(e)}></DragDropFile>
             <h2>Add a Book</h2>
             <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
             <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
