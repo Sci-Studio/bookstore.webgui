@@ -58,7 +58,13 @@ export default function BookForm() {
             <div className='goBackToHomePage' onClick={() => navigate('/')}>
                 <label>Go Back To Home Page</label>
             </div>
-            <DragDropFile label='Book Cover Image' labelImageUrl={coverImage} imageUrl={uploadImage} title={dropTitle} subTitle={dropSubTitle} supportedFormats={dropSupportedFormats}></DragDropFile>
+            <DragDropFile label='Book Cover Image'
+                          labelImageUrl={coverImage}
+                          imageUrl={uploadImage}
+                          title={dropTitle}
+                          subTitle={dropSubTitle}
+                          supportedFormats={dropSupportedFormats}
+                          onFile={(e) => setImageFile(e)}></DragDropFile>
             <h2>Add a Book</h2>
             <input placeholder="Title" value={title} onChange={e=>setTitle(e.target.value)} required />
             <input placeholder="Author" value={author} onChange={e=>setAuthor(e.target.value)} required />
