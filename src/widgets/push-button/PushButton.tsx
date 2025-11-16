@@ -3,7 +3,7 @@ import styles from './PushButton.module.css';
 export interface IPushButtonProps {
     text?: string | null,
     imageUrl?: string | undefined,
-    onClick?: () => void;
+    onClick?: (e: React.MouseEvent<HTMLDivElement>) => void;
     className?: string;
 }
 

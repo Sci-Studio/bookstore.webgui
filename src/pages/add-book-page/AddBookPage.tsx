@@ -37,7 +37,6 @@ export default function AddBookPage() {
         let imageUrl = ''
         try {
             
-
             if (imageFile) {
                 const formData = new FormData()
                 formData.append('image', imageFile)
@@ -86,7 +85,7 @@ export default function AddBookPage() {
                     </div>
                     <div className={styles.formControls}>
                         <PushButton imageUrl={close} text='Cancel' className={styles.cancelButton} onClick={() => navigate('/')}></PushButton>
-                        <PushButton imageUrl={add} text={uploading ? 'Uploading...' : 'Add Book to Library'} className={styles.addButton} onClick={() => submit}></PushButton>
+                        <PushButton imageUrl={add} text={uploading ? 'Uploading...' : 'Add Book to Library'} className={styles.addButton} onClick={(e) => submit(e)}></PushButton>
                     </div>
                     <div>{msg}</div>
                 </form>
