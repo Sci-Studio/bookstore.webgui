@@ -64,6 +64,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 40px;
 }
 
 .cancelButton {
@@ -105,4 +106,10 @@
         width: 383px;
         height: 76px;
     }
+}
+
+.bookImage {
+    margin-top: 40px;
+    width: 100%;
+    height: 404px;
 }

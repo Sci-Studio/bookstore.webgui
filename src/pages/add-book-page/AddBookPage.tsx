@@ -3,11 +3,14 @@ import { useNavigate } from 'react-router-dom'
 import styles from './AddBookPage.module.css';
 import PushButton from '../../widgets/push-button/PushButton';
 import InputField from '../../widgets/input-field/InputField';
+import DragDropFile from '../../widgets/drag-drop-files/DragDropFile';
 import add from '../../assets/svg/add.svg';
 import authorLogo from '../../assets/svg/author.svg';
 import dollarLogo from '../../assets/svg/dollar.svg';
 import close from '../../assets/svg/close.svg';
 import bookLogo from '../../assets/svg/book.svg';
+import coverImage from '../../assets/svg/cover_image.svg';
+import uploadImage from '../../assets/svg/upload.svg';
 import axios from 'axios'
 
 const API_BASE = import.meta.env.VITE_API_BASE || '/api'
@@ -22,6 +25,10 @@ export default function AddBookPage() {
     const [uploading, setUploading] = useState(false);
 
     const navigate = useNavigate();
+
+    const dropTitle = 'Upload Book Cover';
+    const dropSubTitle = 'Click to browse or drag your image here';
+    const dropSupportedFormats = 'Supports PNG, JPG, JPEG up to 10MB';
 
     const submit = async (e: React.FormEvent) => {
         e.preventDefault()
@@ -68,7 +75,15 @@ export default function AddBookPage() {
                             <InputField text='Price' className={styles.inputAuthorPrice} imageUrl={dollarLogo} placeholder='0.00' onChange={(e) => setPrice(e.target.value)}></InputField>
                         </div>
                     </div>
-                    <div className={styles.bookImage}></div>
+                    <div className={styles.bookImage}>
+                        <DragDropFile label='Book Cover Image'
+                          labelImageUrl={coverImage}
+                          imageUrl={uploadImage}
+                          title={dropTitle}
+                          subTitle={dropSubTitle}
+                          supportedFormats={dropSupportedFormats}
+                          onFile={(e) => setImageFile(e)}></DragDropFile>
+                    </div>
                     <div className={styles.formControls}>
                         <PushButton imageUrl={close} text='Cancel' className={styles.cancelButton} onClick={() => navigate('/')}></PushButton>
                         <PushButton imageUrl={add} text={uploading ? 'Uploading...' : 'Add Book to Library'} className={styles.addButton} onClick={() => submit}></PushButton>
