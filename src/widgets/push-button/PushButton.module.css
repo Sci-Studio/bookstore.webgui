@@ -9,12 +9,10 @@
   align-items: center;
 
   label {
-    width: 118px;
-    height: 24px;
     font-family: 'Inter', sans-serif;
     font-weight: var(--font-weight-regular);
     font-size: var(--font-size-md);
-    color: #FFFFFF;
+    color: var(--main-white-background-color);
     display: flex;
     align-items: center;
   }

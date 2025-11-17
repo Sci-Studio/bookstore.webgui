@@ -3,6 +3,7 @@
     /* border colors */
     --light--grey-border-color: #E5E7EB;
     --medium-grey-border-color: #F3F4F6;
+    --cancel-button-border-color: #D1D5DB;
 
     /* background colors */
     --main-page-background-color: #F7F7F7;
@@ -12,5 +13,7 @@
 
     /* label colors */
     --header-label-color: #4B5563;
-    --input-field-label-color: #1F2937;
+    --input-field-label-color: #1F2937;;
+    --add-book-page-color: #111827;
+    --cancel-button-label-color: #6B7280;
 }
